@@ -1,0 +1,17 @@
+{
+  "name": "xyz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-tesseract-ocr": "^2.2.1",
+    "nodemon": "^2.0.12",
+    "puppeteer": "^10.1.0"
+  }
+}
