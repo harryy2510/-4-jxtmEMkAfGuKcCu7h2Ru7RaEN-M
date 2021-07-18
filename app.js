@@ -1,17 +1,13 @@
 const CNR_VALUES = ['PBFZC00004392020', 'PBFZE10028092019']
 
 const puppeteer = require('puppeteer')
-const tesseract = require('node-tesseract-ocr')
+const Tesseract = require('tesseract.js')
 
 const solveCaptcha = async (filePath) => {
-  const config = {
-    lang: 'eng',
-    oem: 1,
-    psm: 7,
-  }
-  return tesseract
-    .recognize(filePath, config)
-    .then((text) => text.replace(/\D/g, ''))
+  const {
+    data: { text },
+  } = await Tesseract.recognize(filePath, 'eng')
+  return text.replace(/\D/g, '')
 }
 
 const captchaImagePath = 'assets/captcha'
