@@ -12,7 +12,6 @@
   "dependencies": {
     "nodemon": "^2.0.12",
     "puppeteer": "^10.1.0",
-    "tesseract-bin": "^1.0.2",
     "tesseract.js": "^2.1.4"
   }
 }
